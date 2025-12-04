@@ -1,0 +1,55 @@
+/* src/App.css - clean modern dashboard look */
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --good: #16a34a;
+  --bad: #ef4444;
+  --neutral: #f3f4f6;
+  --shadow: 0 6px 18px rgba(23, 23, 23, 0.06);
+}
+body { background: var(--bg); font-family: Inter, Arial, sans-serif; margin:0; }
+.app-shell { max-width: 1200px; margin: 28px auto; padding: 12px; }
+.topbar { padding: 18px 8px; }
+.brand { font-size: 28px; color: var(--accent); font-weight: 700; }
+.subtitle { color: var(--muted); margin-top:4px; }
+
+.main { display: grid; gap: 18px; grid-template-columns: 1fr; }
+
+.panel { background: var(--card); border-radius: 12px; padding: 18px; box-shadow: var(--shadow); }
+
+.input-panel { display:flex; gap:12px; align-items:center; }
+.url-input { flex:1; padding:12px 14px; border-radius:8px; border:1px solid #e6eef8; }
+.btn { padding:10px 14px; border-radius:8px; border:none; cursor:pointer; background:#efefef; }
+.btn.primary { background: var(--accent); color:white; }
+
+.summary-panel { display:flex; gap:20px; align-items:flex-start; }
+.summary-left { flex:1; }
+.summary-right { width:240px; }
+
+.title { margin:0 0 8px 0; font-size:20px; }
+.meta { display:flex; gap:12px; align-items:center; margin-bottom:12px; }
+.cred-block { display:flex; flex-direction:column; }
+.cred-label { color:var(--muted); font-size:12px; }
+.cred-value { font-weight:700; font-size:18px; color:#111; }
+.badge { padding:6px 10px; border-radius:999px; color:white; font-weight:600; text-transform:capitalize; }
+.badge.stance.supports { background:#10b981; } /* green */
+.badge.stance.contradicts { background:#ef4444; } /* red */
+.badge.stance.mixed { background:#f59e0b; } /* amber */
+.bias { color:var(--muted); font-size:13px; margin-left:8px; }
+
+.summary-text { color:#374151; margin-top:12px; line-height:1.5; }
+
+.evidence-grid { display:flex; flex-wrap:wrap; gap:12px; margin-top:12px; }
+.evidence-card { width: calc(33% - 12px); background:var(--neutral); padding:12px; border-radius:10px; }
+.evidence-title { font-weight:700; color:var(--accent); margin-bottom:6px; }
+.evidence-text { color:#374151; font-size:14px; }
+
+.kg-panel { min-height:260px; }
+
+.error { color:#b91c1c; background: #fff7f7; border:1px solid #fecaca; }
+
+.hint { color:var(--muted); text-align:center; padding:20px; }
+
+.footer { text-align:center; color:var(--muted); margin-top:18px; }
